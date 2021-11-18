@@ -1,4 +1,3 @@
-from typing import AsyncIterable
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -75,7 +74,7 @@ with st.container():
         ax.set_title("Autocorrelation of IMDB avg. annual rating", fontsize=12)
         ax.set_xlabel('Year')
 
-        st.subheader("... but it is hard preserve it over many years")
+        st.subheader("... and it is hard to preserve it over many years")
         st.pyplot(f)
 
 # correlation between releases and rating
@@ -264,4 +263,5 @@ with st.container():
         'order': ['title'],
     })
 
+    st.subheader("One chart to bring them all")
     xp.to_streamlit(key="id").display()
